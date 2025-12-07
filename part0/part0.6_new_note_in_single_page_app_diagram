@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    server-->>browser: 201 Created
+
+    note right of browser: Browser executes JavaScript code and fetches JSON data from sever
+
+    browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    server-->>browser: JSON data
+    
+
+
+
+
